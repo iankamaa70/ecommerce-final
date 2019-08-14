@@ -136,9 +136,9 @@
           <span>Videos</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">On Demand Videos operations:</h6>
-          <a class="dropdown-item" href="{{ route('videos.index') }}">View On Demand Videos</a>
-          <a class="dropdown-item" href="{{ route('videos.create') }}">New On Demand Video</a>
+          <h6 class="dropdown-header">Videos operations:</h6>
+          <a class="dropdown-item" href="{{ route('videos.index') }}">View Videos</a>
+          <a class="dropdown-item" href="{{ route('videos.create') }}">New Video</a>
         </div>
       </li>
 
