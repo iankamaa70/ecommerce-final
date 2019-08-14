@@ -49,6 +49,16 @@
             </div>
         </div>
     </section>
+    <div class="content section-gutter" >
+        <div class="container">
+          <div class="content__wysiwyg wysiwyg">
+            <div class="content__wysiwyg-inner">
+               <h2 class="main-heading">{{ $video->name }}</h2>
+                  <p>{!! $video->description !!}</p>
+            </div>
+          </div>
+        </div>
+    </div>
 
  @include('footer2')
 

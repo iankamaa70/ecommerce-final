@@ -12,6 +12,17 @@
 */
 
 
+Route::post('/subscribe',function(){
+
+	$email= request('email');
+
+
+	Newsletter::subscribe($email);
+
+	Session::flash('sucess','subscribed successfully.');
+	return redirect()->back();
+
+});
 
 Route::get('/results', function(){
 

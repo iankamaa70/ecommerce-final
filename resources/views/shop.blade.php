@@ -19,15 +19,17 @@
                               </nav>
                            </div>
                         </div>
-                       
-                  <div class="col-md-12 col-sm-6 col-xs-12">
+                     <form method='post' action='/subscribe'>
+                        {{csrf_field()}}
+                     <div class="col-md-12 col-sm-6 col-xs-12">
                            <div class="news-letter wow fadeIn" data-wow-delay="0.2s">
                               <h3 class="section-title">Newsletter</h3>
                               <h6>sign up to our newsletter</h6>
-                              <input type="text" class="email" placeholder="Enter your email"> <button class="btn btn-primary">subscribe</button> 
+                              <input type="text" name="email" class="email" placeholder="Enter your email"> <button class="btn btn-primary" type="submit">subscribe</button> 
                            </div>
                         </div>
                      </div>
+                     </form>
                      <div class="col-md-9">
 
 

@@ -48,6 +48,18 @@
             </div>
         </div>
     </section>
+    @foreach($videos as $video)
+    <div class="content section-gutter" >
+        <div class="container">
+          <div class="content__wysiwyg wysiwyg">
+            <div class="content__wysiwyg-inner">
+               <h2 class="main-heading">{{ $video->name }}</h2>
+                  <p>{!! $video->description !!}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    @endforeach
 
  @include('footer2')
 
