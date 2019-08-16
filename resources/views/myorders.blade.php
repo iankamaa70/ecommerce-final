@@ -16,7 +16,7 @@
                     <table class="table table-hover table-bordered table-sm">
                         <thead>
                             <th>Payment status</th>
-                                <th>Status</th>
+                               
                                     <th>Amount</th>
                                         <th>receipt</th>
                                             <th>view items</th>
@@ -31,13 +31,7 @@
                                     <p>Paid</p>
                                 @endif
                             </td>
-                            <td>
-                                @if ($order->confirmed==0)
-                                    <p>On route</p>
-                                @else
-                                <p>Delivered</p>
-                                @endif
-                            </td>
+                          
                                 <td>${{$order->total}}</td>
                                     <td><a target="_blank" href="{{$order->receipt_url}}">View</a></td>
                         <td><a href="{{route('orderitems.users',$order->id)}}"> items</a></td>

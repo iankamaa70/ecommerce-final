@@ -26,17 +26,6 @@ class CreateOrdersTable extends Migration
             $table->string('billingemail')->nullable();
             $table->string('billingmobile')->nullable();
 
-            $table->string('shippingfirstname')->nullable();
-            $table->string('shippinglastname')->nullable();
-            $table->string('company')->nullable();
-            $table->string('shippingaddress1')->nullable();
-            $table->string('shippingaddress2')->nullable();
-            $table->string('shippingtown')->nullable();
-            $table->string('shippingstate')->nullable();
-            $table->string('shippingpostcode')->nullable();
-            $table->string('shippingemail')->nullable();
-            $table->string('shippingmobile')->nullable();
-
 
             $table->string('transaction_id')->nullable();
             $table->integer('user_id')->default(0);

@@ -15,30 +15,7 @@
             <div class="fashion-v5">
                <div class="container">
                   <div class="row outer-top-sm ">
-                     <div class="col-md-6 sidebar clearfix">
-                        <div class="menu-bar animate-dropdown outer-bottom-xs">
-                           <div class="menu-verticle">
-                              <div class="head"><i class="fa fa-ship"></i>Shipping address</div>
-                              <nav class="yamm navbar" role="navigation">
-                                 <ul class="nav">
-                                        <li class="dropdown menu-item no-menu"><b>Firstname: </b>{{$currentOrder->shippingfirstname}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Last name: </b>{{$currentOrder->shippinglastname}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Address1 : </b>{{$currentOrder->shippingaddress1}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Address2: </b>{{$currentOrder->shippingaddress2}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Country: </b>{{$currentOrder->country}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Town: </b>{{$currentOrder->shippingtown}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>State: </b>{{$currentOrder->shippingstate}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Postcode: </b>{{$currentOrder->shippingpostcode}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Email: </b>{{$currentOrder->shippingemail}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Mobile: </b>{{$currentOrder->shippingmobile}}</li>
-                                        <li class="dropdown menu-item no-menu"><b>Company: </b>{{$currentOrder->company}}</li>
-                                 </ul>
-                              </nav>
-                           </div>
-                        </div>
-                       
-                
-                     </div>
+                    
                      <div class="col-md-6 sidebar clearfix">
                             <div class="menu-bar animate-dropdown outer-bottom-xs">
                                <div class="menu-verticle">
@@ -64,7 +41,7 @@
                     
                          </div>
 
-                         <div class="col-md-8 sidebar clearfix">
+                         <div class="col-md-6 sidebar clearfix">
                                 <table class="table">
                                         <thead>
                                             <th>name</th>
@@ -79,11 +56,15 @@
                                                 <td>{{$item->quantity}}</td>
                                                 <td>${{$item->price}}</td>
                                                 <td>
+                                                   @if ($currentOrder->transaction_id=="")
+                                                       <p>please pay to view item</p>
+                                                   @else
                                                    @foreach ($products as $product)
-                                                       @if ($product->id==$item->product_id)
-                                                <a class="btn btn-primary  btn-block" href="{{URL::asset($product->content)}}" target="_blank">Click to view content</a>  
-                                                       @endif
-                                                   @endforeach
+                                                   @if ($product->id==$item->product_id)
+                                            <a class="btn btn-primary  btn-block" href="{{URL::asset($product->content)}}" target="_blank">Click to view content</a>  
+                                                   @endif
+                                               @endforeach
+                                                   @endif
                                              <td>
                                     </tr>
                                                 @empty

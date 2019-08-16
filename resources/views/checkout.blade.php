@@ -112,100 +112,8 @@
                            </div>
                         </div>
                         <div class="panel panel-default">
-                           <div class="panel-heading" role="tab" id="headingThree">
-                              <h4 class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion-checkout" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> <span class="step">2</span>Shipping Information </a> </h4>
-                           </div>
-                           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                              <div class="panel-body">
-                                 <div class="row billing">
-                                    <div class="col-md-12 col-sm-12 form-rimbus">
-                                       <div class="form-group">
-                                          <div class="checkbox"> <label> <input id="same_address" type="checkbox"> Ship to a different address? </label> </div>
-                                       </div>
-                                    </div>
-                                     <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group">  <label for="exampleInputfirstname1" class="info-title">First Name <span>*</span></label>
-                                              <input value="{{old('shippingfirstname')}}"  type="text" id="shippingfirstname" name="shippingfirstname" class="form-control text-input">
-                                             @if ($errors->has('shippingfirstname'))
-                                             <div class="error">{{ $errors->first('shippingfirstname') }}</div>
-                                          @endif </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputlastname1" class="info-title">Last Name <span>*</span></label> 
-                                             <input value="{{old('shippinglastname')}}"  type="text" id="shippinglastname" name="shippinglastname" class="form-control text-input">
-                                             @if ($errors->has('shippinglastname'))
-                                             <div class="error">{{ $errors->first('shippinglastname') }}</div>
-                                          @endif </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputcompanyname1" class="info-title">Company Name</label>
-                                              <input value="{{old('company')}}"  type="text" name="company" id="exampleInputcompanyname1" class="form-control text-input"> 
-                                              @if ($errors->has('company'))
-                                             <div class="error">{{ $errors->first('company') }}</div>
-                                          @endif</div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group">  <label for="exampleInputaddress1" class="info-title">Address Line 1 <span>*</span></label> 
-                                             <input value="{{old('shippingaddress1')}}"  type="text" id="shippingaddress1" name="shippingaddress1" class="form-control text-input"> 
-                                             @if ($errors->has('shippingaddress1'))
-                                             <div class="error">{{ $errors->first('shippingaddress1') }}</div>
-                                          @endif</div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputaddress1.1" class="info-title">Address Line 2</label> 
-                                             <input value="{{old('shippingaddress2')}}"  type="text" id="shippingaddress2" name="shippingaddress2" class="form-control text-input"> 
-                                             @if ($errors->has('shippingaddress2'))
-                                             <div class="error">{{ $errors->first('shippingaddress2') }}</div>
-                                          @endif
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputcitytown1" class="info-title">city/town <span>*</span></label>
-                                              <input value="{{old('shippingtown')}}"  type="text" id="shippingtown" name="shippingtown" class="form-control text-input"> 
-                                              @if ($errors->has('shippingtown'))
-                                              <div class="error">{{ $errors->first('shippingtown') }}</div>
-                                           @endif
-                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputstate1" class="info-title">state <span>*</span></label>
-                                              <input value="{{old('shippingstate')}}"  type="text" id="shippingstate" name="shippingstate" class="form-control text-input">  
-                                              @if ($errors->has('shippingstate'))
-                                              <div class="error">{{ $errors->first('shippingstate') }}</div>
-                                           @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group">  <label for="exampleInputpostcode1" class="info-title">postcode <span>*</span></label> 
-                                             <input value="{{old('shippingpostcode')}}"  type="text" id="shippingpostcode" name="shippingpostcode" class="form-control text-input"> 
-                                             @if ($errors->has('shippingpostcode'))
-                                             <div class="error">{{ $errors->first('shippingpostcode') }}</div>
-                                          @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputemailid1" class="info-title">email-address <span>*</span></label> 
-                                             <input value="{{old('shippingemail')}}"  type="text" id="shippingemail" name="shippingemail" class="form-control text-input">  
-                                             @if ($errors->has('shippingemail'))
-                                             <div class="error">{{ $errors->first('shippingemail') }}</div>
-                                          @endif
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 form-rimbus">
-                                          <div role="form" class="register-form form-group"> <label for="exampleInputmobile1" class="info-title">mobile <span>*</span></label>
-                                              <input value="{{old('shippingmobile')}}"  type="text" id="shippingmobile" name="shippingmobile" class="form-control text-input">  
-                                              @if ($errors->has('shippingmobile'))
-                                              <div class="error">{{ $errors->first('shippingmobile') }}</div>
-                                           @endif
-                                        </div>
-
-                                    </div>
-                                 
-                                 </div>
-                                 
-                              </div>
-                              
-                           </div>
+                         
+                          
                            <div class="col-md-6 col-sm-6 form-rimbus"> <button style="margin-top:20px;" class="btn-upper btn btn-primary" type="submit">continue</button> </div>
                         </form>
                         </div>                       
@@ -224,7 +132,6 @@
                            <div class="panel-body">
                               <ul class="nav nav-checkout-progress list-unstyled">
                                  <li><a href="#">Billing Address</a></li>
-                                 <li><a href="#">Shipping Address</a></li>
                               </ul>
                            </div>
                         </div>

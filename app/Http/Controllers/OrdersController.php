@@ -14,6 +14,7 @@ class OrdersController extends Controller
         $userid=Auth::user()->id;
         $myorders=Orders::where('user_id','=',$userid)->latest()->paginate(8);
         return view('myorders',compact('myorders'));
+        
 
     }
     public function vieworderitems($id){

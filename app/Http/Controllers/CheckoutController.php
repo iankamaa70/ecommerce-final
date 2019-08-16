@@ -105,18 +105,6 @@ class CheckoutController extends Controller
 			'billingpostcode'=>'required',
 			'billingemail'=>'required',
 			'billingmobile'=>'required',
-
-			'shippingfirstname'=>'required',
-			'shippinglastname'=>'required',
-			'company'=>'required',
-			'shippingaddress1'=>'required',
-			'shippingaddress2'=>'required',
-			'shippingtown'=>'required',
-			'shippingstate'=>'required',
-			'shippingpostcode'=>'required',
-			'shippingemail'=>'required',
-			'shippingmobile'=>'required',
-
 		]);
 		$order=Orders::create($validated);
 

@@ -76,6 +76,7 @@ Route::middleware(['auth'])->group(function () {
 		'as' => 'cart.checkout'
 	
 	]);
+	
 
 	Route::post('create/order', [
 

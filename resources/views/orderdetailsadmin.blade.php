@@ -5,36 +5,14 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default" style="background-color: white">
-                <div class="panel-heading" style="text-align: center;">order details</div>
+                <div class="panel-header"></div>
 
                 <div class="panel-body">
 
-                    <div class="row" align="center">
-                        <div class="col-6">
-                                <div class="panel panel-default" style="background-color: white;">
-                                        <div class="panel-heading" style="text-align: center;"><h4>Shipping address</h4></div>
-                        
-                                        <div class="panel-body">
-                                            <ul style="list-style: none;">
-                                                    <li><b>Firstname: </b>{{$currentOrder->shippingfirstname}}</li>
-                                                    <li><b>Last name: </b>{{$currentOrder->shippinglastname}}</li>
-                                                    <li><b>Address1 : </b>{{$currentOrder->shippingaddress1}}</li>
-                                                    <li><b>Address2: </b>{{$currentOrder->shippingaddress2}}</li>
-                                                    <li><b>Country: </b>{{$currentOrder->country}}</li>
-                                                    <li><b>Town: </b>{{$currentOrder->shippingtown}}</li>
-                                                    <li><b>State: </b>{{$currentOrder->shippingstate}}</li>
-                                                    <li><b>Postcode: </b>{{$currentOrder->shippingpostcode}}</li>
-                                                    <li><b>Email: </b>{{$currentOrder->shippingemail}}</li>
-                                                    <li><b>Mobile: </b>{{$currentOrder->shippingmobile}}</li>
-                                                    <li><b>Company: </b>{{$currentOrder->company}}</li>
-                                            
-                                            </ul>
-                                                </div>
-                                    </div>
-                        </div>
-                        <div class="col-6">
-                                <div class="panel panel-default" style="background-color: white">
-                                        <div class="panel-heading" style="text-align: center;"><h4>Billing address</h4></div>
+                    <div class="row" >
+                       <div class="col-6">
+                         <div class="panel">
+                            <div class="panel-heading" style="text-align: center;"><h4>Billing address</h4></div>
                         
                                         <div class="panel-body">
                                                 <ul style="list-style: none;">
@@ -53,7 +31,7 @@
                                         </div>
                                     </div>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-6">
                                 <table class="table">
                                         <thead>
                                             <th>name</th>
@@ -74,7 +52,7 @@
                                         
                                     </table>
                         </div>
-                        <div class="col-4" align="left">
+                        <div class="col-6">
 
                                 <div class="panel panel-default" style="background-color: white">
                                         <div class="panel-heading" style="text-align: center;"><h4>Order details</h4></div>
