@@ -7,13 +7,14 @@ use Auth;
 use App\Orders;
 use App\OrderItems;
 use App\Product;
+use App\Setting;
 
 class OrdersController extends Controller
 {
     public function index(){
         $userid=Auth::user()->id;
         $myorders=Orders::where('user_id','=',$userid)->latest()->paginate(8);
-        return view('myorders',compact('myorders'));
+        return view('myorders',compact('myorders'))->with('settings',Setting::first());
         
 
     }
@@ -25,7 +26,7 @@ class OrdersController extends Controller
             return redirect()->back();
         }
         $orderitems=OrderItems::where("order_id","=",$id)->get();
-        return view('orderdetails',compact('currentOrder','orderitems','products'));
+        return view('orderdetails',compact('currentOrder','orderitems','products'))->with('settings',Setting::first());
     }
     public function adminindex() {
         $myorders=Orders::where('transaction_id','!=',null)->latest()->paginate(8);

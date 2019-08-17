@@ -5,9 +5,11 @@
                      <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 company-info">
                            <div class="logo">
-                              <h1>CHURCH WEBSITE</h1>
+                              <h1>S.I.S.D.A.C</h1>
                            </div>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Duis a feugiat nibh. Aliq uam scele risque tellus et tortor laoreet..</p>
+                           <p>
+                              
+                           </p>
                            
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 foot-menu information">
@@ -17,11 +19,11 @@
                               </div>
                               <div class="list-links">
                                  <ul class="foot-link list-unstyled">
-                                    <li><a href="#">about us</a></li>
-                                    <li><a href="#">delivery information</a></li>
-                                    <li><a href="#">privacy policy</a></li>
-                                    <li><a href="#">terms &amp; conditions</a></li>
-                                    <li><a href="#">manufacutre</a></li>
+                                    <li><a href="/give">Giving</a></li>
+                                    <li><a href="/shop">Store</a></li>
+                                    <li><a href="{{ route('event') }}">Events</a></li>
+                                    <li><a href="{{ route('report') }}">News</a></li>
+                                    <li><a href="{{ route('video') }}">Watch on demand</a></li>
                                  </ul>
                               </div>
                            </div>
@@ -34,11 +36,11 @@
                               <h4 class="title">folow us on</h4>
                               <div class="footer-social">
                                  <ul class="social-links list-unstyled list-inline">
-                                    <li><a href="#" class="link"><span class="icon facebook"><i class="fa fa-facebook"></i></span></a></li>
-                                    <li><a href="#" class="link"><span class="icon google-plus"><i class="fa fa-google-plus"></i></span></a></li>
-                                    <li><a href="#" class="link"><span class="icon twitter"><i class="fa fa-twitter"></i></span></a></li>
-                                    <li><a href="#" class="link"><span class="icon tumblr"><i class="fa fa-tumblr"></i></span></a></li>
-                                    <li><a href="#" class="link"><span class="icon pinterest"><i class="fa fa-pinterest"></i></span></a></li>
+                                    <li><a href="{{ $settings-> fb}}" class="link"><span class="icon facebook"><i class="fa fa-facebook"></i></span></a></li>
+                                    <li><a href="{{ $settings->twitter }}" class="link"><span class="icon twitter"><i class="fa fa-twitter"></i></span></a></li>
+                                    <li><a href="{{ $settings->youtube }}" class="link"><span class="icon google-youtube"><i class="fa fa-youtube"></i></span></a></li>
+                                    <li><a href="{{ $settings->li }}" class="link"><span class="icon linkedin"><i class="fa fa-linkedin"></i></span></a></li>
+                                    <li><a href="{{ $settings->ig }}" class="link"><span class="icon instagram"><i class="fa fa-instagram"></i></span></a></li>
                                  </ul>
                               </div>
                            </div>
@@ -51,10 +53,10 @@
                                           <div class="location media">
                                              <span class="map icon media-left"> <i class="fa fa-map-marker"></i> </span> 
                                              <div class="content media-body">
-                                                <address>68 Dohava Stress,Lorem isput Spusts <br>New York- United State</address>
+                                                <address>{{ $settings->contact_address }}</address>
                                              </div>
                                           </div>
-                                          <div class="phone-no media"> <span class="phone icon media-left"> <i class="fa fa-phone"></i> </span> <span class="content media-body"> <span class="contact-no">+111 222 3344 5566</span> <span class="contact-no">+111 222 3344 5566</span> </span> </div>
+                                          <div class="phone-no media"> <span class="phone icon media-left"> <i class="fa fa-phone"></i> </span> <span class="content media-body"> <span class="contact-no">{{ $settings->contact_phone }}</span></div>
                                           <div class="email-id media"></div>
                                        </div>
                                     </div>

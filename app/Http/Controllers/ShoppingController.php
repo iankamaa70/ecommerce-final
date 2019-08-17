@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Cart;
 use Session;
+use App\Setting;
 
 
 class ShoppingController extends Controller
@@ -42,7 +43,7 @@ class ShoppingController extends Controller
 
     {
         
-        return view('cart');
+        return view('cart')->with('settings',Setting::first());;
     }
 
 

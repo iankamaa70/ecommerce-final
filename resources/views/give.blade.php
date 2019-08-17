@@ -100,9 +100,9 @@
                <div class="hero-icons__item">
                   <div class="hero-icons__item-inner">
                   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank _top">
-    <input type="hidden" name="cmd" value="_donations" />
-    <input type="hidden" name="business" value="allanjiru@gmail.com" />
-    <input type="hidden" name="item_name" value="Donate/ give to church" />
+    <input type="hidden" name="cmd" value="_{{ $settings->paypal_cmd }}" />
+    <input type="hidden" name="business" value="{{ $settings->paypal_email }}" />
+    <input type="hidden" name="item_name" value="{{ $settings->paypal_item_name }}" />
     <input type="hidden" name="currency_code" value="USD" />
     <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;">
         <span style="font-family: Verdana, Tahoma;font-weight: bold;font-size: 26px;">

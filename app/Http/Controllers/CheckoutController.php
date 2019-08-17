@@ -12,6 +12,7 @@ use Session;
 use Auth;
 use App\Orders;
 use App\OrderItems;
+use App\Setting;
 
 class CheckoutController extends Controller
 {
@@ -24,7 +25,7 @@ class CheckoutController extends Controller
 
     		   	return redirect()->back();
     		   }
-    		return view('checkout');
+    		return view('checkout')->with('settings',Setting::first());
     	}
 
     public function pay($id)
@@ -50,7 +51,7 @@ class CheckoutController extends Controller
         Cart::clear();
 
         Mail::to(request()->stripeEmail)->send(new \App\Mail\PurchaseSuccessful);
-        return redirect('/shop');
+        return redirect('/shop')->with('settings',Setting::first());;
     }
 
     public function paywithpaypal()
@@ -128,7 +129,7 @@ class CheckoutController extends Controller
 		$order->user_id=$userid;
 		$order->save();
 
-		return redirect()->route('cart.paymenoptions.checkout', $order->id);
+		return redirect()->route('cart.paymenoptions.checkout', $order->id)->with('settings',Setting::first());;
 
 
 
@@ -141,6 +142,6 @@ class CheckoutController extends Controller
 	public function showpaymentOptions($id){
 		$order=Orders::find($id);
 
-		return view('payment',compact('order'));
+		return view('payment',compact('order'))->with('settings',Setting::first());;
 	}
 }

@@ -8,17 +8,17 @@
                               <h4 class="label-text footer__widget-title" data-module="toggle-class" data-toggle-class='{"target": "#footer-about", "class": "footer__widget--activate"}'>Links<span class="icon-triagle-down footer__widget-icon"></span></h4>
                               <ul id="menu-about-footer" class="footer__menu">
                                  <li id="menu-item-10316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10316"><a href="/give" aria-label="Giving">Giving</a></li>
-                                 <li id="menu-item-10319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10319"><a href="/shop" aria-label="Store">Store</a></li>
+                                 <li id="menu-item-10319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10319"><a href="/shop" aria-label="Store">Store</a></li> 
                                  <li id="menu-item-10317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10317"><a href="{{ route('event') }}" aria-label="Events">Events</a></li>
-                                 <li id="menu-item-10318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10318"><a href="jobs/index.html" aria-label="Watch on demand">Watch on demand</a></li>
+                                 <li id="menu-item-10318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10318"><a href="{{ route('video') }}" aria-label="Watch on demand">Watch on demand</a></li>
                               </ul>
                            </div>
                            <div class="footer__block-newsletter">
                               <h4 class="label-text footer__widget-title" data-module="toggle-class" data-toggle-class='{"target": "#footer-resources", "class": "footer__widget--activate"}'>Contact Us<span class="icon-triagle-down footer__widget-icon"></span></h4>
                               <ul id="menu-resources-footer" class="footer__menu">
-                                 <li id="menu-item-10321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10321"><a  aria-label="Terms &#038; Conditions">Email: info@email.com</a></li>
-                                 <li id="menu-item-10322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10322"><a  aria-label="Privacy Policy">Phone: 1 234 567 8912</a></li>
-                                 <li id="menu-item-10323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10323"><a  aria-label="Accessibility">Loop Road, New York, NY 10044</a></li>
+                                 <li id="menu-item-10321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10321"><a  aria-label="Terms &#038; Conditions">Email: {{ $settings->contact_email }}</a></li>
+                                 <li id="menu-item-10322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10322"><a  aria-label="Privacy Policy">Phone: {{ $settings->contact_phone }}</a></li>
+                                 <li id="menu-item-10323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10323"><a  aria-label="Accessibility">{{ $settings->contact_address }}</a></li>
                               </ul>
                            </div>
                         </div>
@@ -51,19 +51,19 @@
                            <div class="footer__block-social">
                               <ul class="social-links social-links--footer">
                                  <li class="social-links__item">
-                                    <a class="social-links__link" href="https://www.facebook.com/" target="_blank" title="facebook"><span class="icon-facebook"></span></a>
+                                    <a class="social-links__link" href="{{ $settings->fb }}" target="_blank" title="facebook"><span class="icon-facebook"></span></a>
                                  </li>
                                  <li class="social-links__item">
-                                    <a class="social-links__link" href="https://twitter.com/" target="_blank" title="twitter"><span class="icon-twitter"></span></a>
+                                    <a class="social-links__link" href="{{ $settings->twitter }}" target="_blank" title="twitter"><span class="icon-twitter"></span></a>
                                  </li>
                                  <li class="social-links__item">
-                                    <a class="social-links__link" href="https://www.youtube.com/" target="_blank" title="youtube-play"><span class="icon-youtube-play"></span></a>
+                                    <a class="social-links__link" href="{{ $settings->youtube }}" target="_blank" title="youtube-play"><span class="icon-youtube-play"></span></a>
                                  </li>
                                  <li class="social-links__item">
-                                    <a class="social-links__link" href="https://www.linkedin.com/" target="_blank" title="linkedin"><span class="icon-linkedin"></span></a>
+                                    <a class="social-links__link" href="{{ $settings->li }}" target="_blank" title="linkedin"><span class="icon-linkedin"></span></a>
                                  </li>
                                  <li class="social-links__item">
-                                    <a class="social-links__link" href="https://www.instagram.com" target="_blank" title="instagram"><span class="icon-instagram"></span></a>
+                                    <a class="social-links__link" href="{{ $settings->ig }}" target="_blank" title="instagram"><span class="icon-instagram"></span></a>
                                  </li>
                               </ul>
                            </div>

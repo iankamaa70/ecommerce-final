@@ -1,20 +1,22 @@
 @include('head')
    <body class="home page-template page-template-templates page-template-page-home page-template-templatespage-home-php page page-id-711">
       <div class="wrapper js-wrapper">
-         @include('menu')
+         @include('menu') 
          <div class="main js-main">
             <section class="hero-video" data-module="hero-video" role="banner" aria-label="Hero">
                <div class="hero-video__wrapper js-hero-wrapper">
                   <
                   <div class="hero-video__iframe js-iframe">
-                     <iframe id="iframe-hero" aria-hidden="true" data-autoplay data-keepplaying width="640" height="360" src="https://www.youtube.com/embed/2R2uNfSqCe4?vq=hd1080&amp;feature=oembed&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;controls=0&amp;rel=0&amp;wmode=transparent&amp;showinfo=0&amp;mute=1&amp;autohide=0&amp;modestbranding=1&amp;playlist=2R2uNfSqCe4" title="Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+                     <iframe id="iframe-hero" aria-hidden="true" data-autoplay data-keepplaying width="640" height="360" src="https://www.youtube.com/embed/{{ $settings->homepage_youtube }}?vq=hd1080&amp;feature=oembed&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;controls=0&amp;rel=0&amp;wmode=transparent&amp;showinfo=0&amp;mute=1&amp;autohide=0&amp;modestbranding=1&amp;playlist=2R2uNfSqCe4" title="Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
                   </div>
                </div>
                <div class="hero-video__content js-hero-content">
                   <div class="hero-video__container">
-                     <div class="hero-video__inner">
-                        <h1 class="hero-video-title hero-video__headline">Welcome Home</h1>
-                        <p class="hero-video-description hero-video__description">"And the king said to the man of God, “Entreat now the favor of the LORD your God, and pray for me, that my hand may be restored to me.” And the man of God entreated the LORD, and the king’s hand was restored to him and became as it was before. "</p>
+                     <div >
+                        <h1 class="hero-video-title hero-video__headline" style="text-align: center;">{{ $settings->homepage_text1 }}</h1>
+                        <p class="hero-video-description hero-video__description" style="text-align: center;">
+                           {{ $settings->homepage_text2 }}
+                        </p>
                      </div>
                      <button class="hero-video__control icon-pause js-hero-control" aria-label="Play/Pause Video"></button>
                      <span class="hero-video__trigger icon-angle-down js-hero-trigger"></span>
@@ -53,7 +55,7 @@
                                        <div class="card-fourth__content-inner">
                                           <h3 class="card-fourth-title secondary-title card-fourth__title"><a href="{{ route('event.single', ['id' => $event->id]) }}">{{$event->name}}</a></h3>
                                           <div class="card-fourth__footer">
-                                             <a class="button-link button-link-white card-fourth__button" href="{{ route('event.single', ['id' => $event->id]) }}"><span>Read the story</span><span class="icon-arrow"></span></a>
+                                             <a class="button-link button-link-white card-fourth__button" href="{{ route('event.single', ['id' => $event->id]) }}"><span>Click here</span><span class="icon-arrow"></span></a>
                                           </div>
                                        </div>
                                     </div>
@@ -224,7 +226,7 @@
                                  <span style="font-weight: 400;font-size:25px">Sunday Worship 9:30 AM </span><br>   
                                  <span style="font-weight: 400;font-size:25px">Sunday Service 11:00 AM  </span><br>
                                  <span style="font-weight: 400;font-size:14px">
-                                 The Potter’s House of North Dallas | 10501 Main Street | Frisco, TX 75035
+                                 {{ $settings->contact_address }}
                                  </span>            
                               </div>
                            </blockquote>

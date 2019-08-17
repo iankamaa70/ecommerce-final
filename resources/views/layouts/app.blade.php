@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>Admin Portal</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Admin</a>
+    <a class="navbar-brand mr-1">Admin</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -68,7 +68,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link">
           <i class="fas fa-fw fa-tachometer-alt"></i>
        
          <span>Admin dashboard</span>
@@ -132,7 +132,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-fw fa-list"></i>
+        <i class="fas fa-newspaper"></i>
           <span>News</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -144,7 +144,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-fw fa-list"></i>
+        <i class="fas fa-video"></i>
           <span>Videos</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -152,6 +152,13 @@
           <a class="dropdown-item" href="{{ route('videos.index') }}">View Videos</a>
           <a class="dropdown-item" href="{{ route('videos.create') }}">New Video</a>
         </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="{{ route('settings') }}" id="pagesDropdown"aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
       </li>
 
       

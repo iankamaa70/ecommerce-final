@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 
 Route::post('/subscribe',function(){
 
@@ -42,6 +42,20 @@ Route::resource('categories', 'CategoryController');
 Route::resource('reports', 'ReportController');
 Route::resource('events', 'EventController');
 Route::resource('videos', 'VideoController');
+
+Route::get('/settings',[
+
+	'uses'=> 'SettingsController@index',
+	'as'=> 'settings'
+
+]);
+
+Route::post('settings/update',[
+
+	'uses'=>	'SettingsController@update',
+	'as'=>	'settings.update'
+
+]);
 
 
 Route::get('/admin/orders',[
@@ -201,9 +215,7 @@ Route::get('/ondemandvideo',[
 
 Route::get('/', 'FrontEndController@welcome');
 
-Route::get('/give', function () {
-    return view('give');
-});
+Route::get('/give', 'FrontEndController@give');
 
 Route::get('pay-with-paypal','CheckoutController@paywithpaypal')->name('payment.paypal');
 
