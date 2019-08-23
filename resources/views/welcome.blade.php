@@ -63,8 +63,6 @@
                               </article>
                               <?php  $count+=1; ?>
                               @endforeach
-                              
-                  
                            </div>
                            <div class="home-tag-row-label news-card__bottom-text">
                               <p>All <a href="{{ route('event') }}">Events</a></p>
@@ -73,6 +71,12 @@
                      </div>
                   </div>
                </section>
+
+               
+
+
+
+
                <section class="theme-block" role="region" aria-label="Exploration on a theme">
                   <div class="theme-block__container">
                      <h2 class="home-tag-row-label theme-block__headline">Latest News</h2>
@@ -95,7 +99,8 @@
                                     <li class="tab-horizontal__header-item js-toggle" data-color="#fe502d" data-target="#tab-horizontal-0">
                                        <div class="home-tab-title tab-horizontal__header-link">
                                           <a href="#tab-horizontal-0" class="home-tab-title tab-horizontal__header-title" role="tab" aria-selected="true" aria-controls="tab-horizontal-0">
-                                          Latest News                               <span class="tab-horizontal__header-line"></span>
+                                          Latest News   
+                                             <span class="tab-horizontal__header-line"></span>
                                           </a>
                                        </div>
                                     </li>
@@ -103,15 +108,12 @@
                               </div>
                               <div class="tab-horizontal__content js-content-list">
                                  <div class="home-tab-horizontal-description tab-horizontal__content-item js-content" id="tab-horizontal-0">
-                                                    
                                  </div>
                               </div>
                               <div class="tab-horizontal__list js-list">
                                  <span class="tab-horizontal__border js-border"></span>
                                  <div class="theme-grid js-theme" data-theme="0">
                                     <div class="theme-grid__wrapper">
-                                       
-
                                        @foreach($reports as $report) 
                                        <div class="theme-grid__block theme-grid__block-news">
                                           <div class="theme-grid__item">
@@ -138,24 +140,9 @@
                                              </div>
                                           </div>
                                        </div>
-
                                        @endforeach
-
-
-
-
                                     </div>
-                                 </div>
-                                
-
-
-
-
-
-
-
-                                 
-                                 
+                                 </div>  
                               </div>
                            </div>
                         </div>
@@ -230,9 +217,6 @@
                                  </span>            
                               </div>
                            </blockquote>
-
-                           
-                           
                         </div>
                         <!-- Program show on mobile -->
                            <div class="alumni-spotlight__program alumni-spotlight__program--mobile">

@@ -55,6 +55,42 @@
       
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="theme-color" content="#ffffff">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column2 {
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+}
+</style>
      
       <style type="text/css">.broken_link, a.broken_link {
          text-decoration: line-through;

@@ -18,6 +18,34 @@
                </div>
             </section>
             <main id="main_content" itemprop="mainContentOfPage" tabindex="-1">
+
+               <h1 style="text-align: center;padding: 20px;font-size: 30px"><b>FIND A CHURCH IN YOUR AREA</b></h1>
+
+
+               <div class="row">
+                  <div class="column" align="center">
+                     <img src="{{ asset('2/wp-content/uploads/New_Zealand.svg.png')}}" height="100px">
+                           <h1 ><b>New Zealand</b></h1>
+                              <ul>
+                                 <li><a href="">Aukland</a></li>
+                                 <li><a href="">Wellington</a></li>
+                              </ul>
+                   </div>
+                  <div class="column" align="center">
+                     <img src="{{ asset('2/wp-content/uploads/Australia.svg')}}" height="100px" class="center">
+                           <h1 ><b>Australia</b></h1>
+                   </div>
+                  <div class="column" align="center">
+                     <img src="{{ asset('2/wp-content/uploads/usa.png')}}" height="100px" class="center">
+                           <h1 ><b>United States of America</b></h1>
+                  </div>
+                  <div class="column" align="center">
+                     <img src="{{ asset('2/wp-content/uploads/samoa.svg')}}" height="100px" class="center">
+                           <h1><b>Samoa</b></h1>
+                  </div>
+               </div>
+
+                  
                
                <section class="section-gutter archive-list archive-list--landing" role="region" aria-label="All news">
                   <div class="container archive-list__container">

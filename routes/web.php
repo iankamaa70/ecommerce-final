@@ -42,6 +42,7 @@ Route::resource('categories', 'CategoryController');
 Route::resource('reports', 'ReportController');
 Route::resource('events', 'EventController');
 Route::resource('videos', 'VideoController');
+Route::resource('churches', 'ChurchController');
 
 Route::get('/settings',[
 

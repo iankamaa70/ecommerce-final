@@ -46,8 +46,8 @@ class EventController extends Controller
             'name' => 'required',
             'image' => 'required|image',
             'description' => 'required',
-            'event_date' =>'required',
-            'time' => 'required'
+            'event_date' =>'',
+            'time' => ''
         ]);
 
         $event = new Event;
@@ -107,8 +107,8 @@ class EventController extends Controller
             'name' => 'required',
             'image' => 'required|image',
             'description' => 'required',
-            'event_date' =>'required',
-            'time' => 'required'
+            'event_date' =>'',
+            'time' => ''
         ]);
 
         $event = Event::find($id);

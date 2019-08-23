@@ -2,64 +2,55 @@
 <body class="page-template page-template-templates page-template-page-flexible page-template-templatespage-flexible-php single single-page postid-7873 page page-id-7873 page-parent">
     <div class="wrapper js-wrapper">
 @include('menu')
-<section class="hero hero--small js-hero" data-module="hero" role="banner" aria-label="Videos">
-	<div class="hero__background" style="background-color: #323A46">
-			</div>
-		<div class="container container--xl hero__container">
-		<div class="hero__wrapper">
-			<div class="hero__content">
-					 <h1 class="main-title hero__title">Videos</h1>
-			</div>
-		</div>
-	</div>
-</section>
+<section class="hero js-hero" data-module="hero" role="banner" aria-label="News">
+               <div class="hero__background" >
+                  <figure class="js-wrap image  image--cover hero__background-image" data-module="image">
+                     <img class="image__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-normal="{{ asset('2/wp-content/uploads/1.jpg')}}" data-retina="{{ asset('2/wp-content/uploads/1.jpg')}}" >
+                  </figure>
+               </div>
+               <div class="container container--xl hero__container">
+                  <div class="hero__wrapper">
+                     <div class="hero__content">
+                        <h1 class="main-title hero__title">On-Demand Videos</h1>
+                     </div>
+                  </div>
+               </div>
+            </section>
 <br>
 
 <section class="section-gutter hero-grid" role="region" aria-label="Content grid">
     <div class="container hero-grid__container">
-                        <h2 class="h2 hero-grid__title">Watch on demand videos.</h2>
+    </div>
+                        
                     
 </section>
 
-<section class="section-gutter card-video section-bg">
+
+
+<section class="section-gutter card-video ">
         <div class="container card-video__container">
             <div class="card-video__inner">
-                <div class="card-video__video">
-                    <div class="video js-video" data-video-iframe="video-5d480f228c18a" data-module="video">
+
+                <div class="row">
+                    <div class="column2" align="center" style="">
                         @foreach($videos as $video)
-                        <video width="575" height="350" controls src="{{URL::asset($video->video)}}">
+                          <video width="100%" video="100%" style="width:100%, height:100%" controls src="{{URL::asset($video->video)}}">
                         @endforeach
-                        <div class="icon-play video__button">
-                            <span class="video__inner"></span>
-                         </div>
+                    </div>
+                    <div class="column" align="center" >
+                       <ul>
+                        @foreach($vidas as $vida)
+                          <li>
+                             <a target="blank" href="{{ route('video.single', ['id' => $vida->id]) }}"><img src="{{ URL::asset($vida->image) }}" width="100px" height="50px"></a>
+                          </li>
+                        @endforeach
+                       </ul>
                     </div>
                 </div>
-                
-                <div class="card-video__content">
-                    <ul>
-                      @foreach($vidas as $vida)
-                      <li>
-                        <h2><a href="{{ route('video.single', ['id' => $vida->id]) }}">{{ $vida->name }}</a></h2>
-                      </li>
-                      @endforeach
-                    </ul>
-                </div>
-                
             </div>
         </div>
     </section>
-    @foreach($videos as $video)
-    <div class="content section-gutter" >
-        <div class="container">
-          <div class="content__wysiwyg wysiwyg">
-            <div class="content__wysiwyg-inner">
-               <h2 class="main-heading">{{ $video->name }}</h2>
-                  <p>{!! $video->description !!}</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    @endforeach
+
 
  @include('footer2')
 

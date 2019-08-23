@@ -13,8 +13,8 @@ class SettingsTableSeeder extends Seeder
     {
         \App\Setting::create([
 
-        	'homepage_text1' =>	"Welcome Home",
-			'homepage_text2' =>	"And the king said to the man of God. ",
+        	'homepage_text1' =>	"SAMOAN INDEPENDENT SEVENTH DAY ADVENTIST CHURCH",
+			'homepage_text2' =>	"Be strong and courageous.Do not be afraid or terrified because of them,for the Lord your God goes with you;he will never leave you nor forsake you.",
 			'homepage_youtube' => "2R2uNfSqCe4",
 			'contact_email' =>	"contact@mail.com",
 			'contact_phone'	=>	"8 234 567 8912",

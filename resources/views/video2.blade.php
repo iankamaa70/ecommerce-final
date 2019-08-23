@@ -21,34 +21,30 @@
                     
 </section>
 
-<section class="section-gutter card-video section-bg">
+<section class="section-gutter card-video">
         <div class="container card-video__container">
             <div class="card-video__inner">
-                <div class="card-video__video">
-                    <div class="video js-video" data-video-iframe="video-5d480f228c18a" data-module="video">
 
-                        <video width="575" height="350" controls src="{{URL::asset($video->video)}}">
-                       
-
-                        <div class="icon-play video__button">
-                            <span class="video__inner"></span>
-                         </div>
+                   <div class="row">
+                    <div class="column2" align="center" style="">
+                        <video  width="100%" video="100%" style="width:100%, height:100%"  controls src="{{URL::asset($video->video)}}">
                     </div>
-                </div>
-                
-                <div class="card-video__content">
-                    <ul>
+                    <div class="column" align="center" >
+                       <ul>
                       @foreach($vidas as $vida)
                       <li>
-                        <h2><a href="{{ route('video.single', ['id' => $vida->id]) }}">{{ $vida->name }}</a></h2>
+                        <a href="{{ route('video.single', ['id' => $vida->id]) }}"><img src="{{ URL::asset($vida->image )}}" width="100px" height="50px"></a>
                       </li>
                       @endforeach
                     </ul>
+                    </div>
                 </div>
+                
                 
             </div>
         </div>
     </section>
+
     <div class="content section-gutter" >
         <div class="container">
           <div class="content__wysiwyg wysiwyg">

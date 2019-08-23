@@ -155,6 +155,18 @@
       </li>
 
       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-church"></i>
+          <span>Church</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header">Manage Churches:</h6>
+          <a class="dropdown-item" href="{{ route('churches.index') }}">View Churches</a>
+          <a class="dropdown-item" href="{{ route('churches.create') }}">Add Church</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="{{ route('settings') }}" id="pagesDropdown"aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-cog"></i>
           <span>Settings</span>
